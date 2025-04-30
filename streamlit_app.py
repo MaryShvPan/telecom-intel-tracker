@@ -42,8 +42,8 @@ for feed in rss_feeds:
     for entry in d.entries[:10]:
         category = categorize_article(entry.title, entry.summary)
         if category in category_filter:
-    st.markdown(f"**[{entry.title}]({entry.link})**  \n*{category}*  \n{entry.published}")
-    st.write(entry.summary[:200] + "...")
-
-{entry.published}")
+            link = f"**[{entry.title}]({entry.link})**  
+*{category}*  
+{entry.published}"
+            st.markdown(link)
             st.write(entry.summary[:200] + "...")
